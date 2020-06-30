@@ -1,0 +1,95 @@
+from __future__ import unicode_literals
+from djongo import models
+
+# Create your models here.
+
+class User(models.Model):    # Collection name
+    name = models.CharField(max_length=200, null=True)
+    email = models.CharField(max_length=200, null=True)
+    address = models.CharField(max_length=200, null=True)
+    date_created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+       return self.name
+
+class Location(models.Model):
+    name = models.CharField(max_length=200, null=True)
+    fendering_position = models.CharField(max_length=1000, null=True, blank=True)
+    STS_position = models.CharField(max_length=1000, null=True, blank=True)
+    cargoes_permitted = models.CharField(max_length=1000, null=True, blank=True)
+    operation_type = models.CharField(max_length=1000, null=True, blank=True)
+    approval_authority = models.CharField(max_length=1000, null=True, blank=True)
+    port_fees_vessels = models.CharField(max_length=1000, null=True, blank=True)
+    vessels_size_permitted = models.CharField(max_length=1000, null=True, blank=True)
+    depth_of_water = models.CharField(max_length=1000, null=True, blank=True)
+    prior_approval_to_each_STS_operation = models.CharField(max_length=1000, null=True, blank=True)
+    vessel_sizes_permitted = models.CharField(max_length=1000, null=True, blank=True)
+    night_time_berthing_permitted = models.CharField(max_length=1000, null=True, blank=True)
+    is_local_piloting_assistance_required = models.CharField(max_length=1000, null=True, blank=True)
+    are_tugs_required = models.CharField(max_length=1000, null=True, blank=True)
+    primary_fenders = models.CharField(max_length=1000, null=True, blank=True)
+    secondary_fenders = models.CharField(max_length=1000, null=True, blank=True)
+    fender_moorings = models.CharField(max_length=1000, null=True, blank=True)
+    rubber_hoses = models.CharField(max_length=1000, null=True, blank=True)
+    composite_hoses = models.CharField(max_length=1000, null=True, blank=True)
+    agent_company = models.CharField(max_length=1000, null=True, blank=True)
+    agent_contact = models.CharField(max_length=1000, null=True, blank=True)
+    fees_to_be_incurred_for_STS_operations = models.DecimalField(max_digits=20, decimal_places = 2, null=True, blank=True)
+    base_Location = models.CharField(max_length=1000, null=True, blank=True)
+    storage_space = models.CharField(max_length=1000, null=True, blank=True)
+    security_arrangements = models.CharField(max_length=1000, null=True, blank=True)
+    closest_airport = models.CharField(max_length=1000, null=True, blank=True)
+    local_taxi_firms = models.CharField(max_length=1000, null=True, blank=True)
+    accommodation = models.CharField(max_length=1000, null=True, blank=True)
+    base_facilities = models.CharField(max_length=1000, null=True, blank=True)
+    notice_period = models.CharField(max_length=1000, null=True, blank=True)
+    documentation_requirements = models.CharField(max_length=1000, null=True, blank=True)
+    vessel_name = models.CharField(max_length=1000, null=True, blank=True)
+    support_craft_owner = models.CharField(max_length=1000, null=True, blank=True)
+    telephone = models.CharField(max_length=1000, null=True, blank=True)
+    tug_provider_company = models.CharField(max_length=1000, null=True, blank=True)
+    tug_provider_contact = models.CharField(max_length=1000, null=True, blank=True)
+    tug_provider_vessel_Name = models.CharField(max_length=1000, null=True, blank=True)
+    location_under_the_control_of_authorities = models.CharField(max_length=1000, null=True, blank=True)
+    current_port_security_level = models.CharField(max_length=1000, null=True, blank=True)
+    what_is_considered_port_limits = models.CharField(max_length=1000, null=True, blank=True)
+    what_is_considered_international_waters = models.CharField(max_length=1000, null=True, blank=True)
+    distance_from_support_base = models.CharField(max_length=1000, null=True, blank=True)
+    transit_time_from_shore_to_STS_location = models.CharField(max_length=1000, null=True, blank=True)
+    size_of_transfer_area = models.CharField(max_length=1000, null=True, blank=True)
+    does_the_area_have_a_large_enough_run_in_area = models.CharField(max_length=1000, null=True, blank=True)
+    is_the_transfer_area_sheltered = models.CharField(max_length=1000, null=True, blank=True)
+    regulations_to_be_complied_during_the_operation = models.CharField(max_length=1000, null=True, blank=True)
+    nature_of_seabed = models.CharField(max_length=1000, null=True, blank=True)
+    average_depth_of_water = models.CharField(max_length=1000, null=True, blank=True)
+    STS_location_suitable_for_anchoring = models.CharField(max_length=1000, null=True, blank=True)
+    any_other_service_provider_in_the_same_vicinity = models.CharField(max_length=1000, null=True, blank=True)
+    local_marine_activity = models.CharField(max_length=1000, null=True, blank=True)
+    any_physical_limitations_on_vessel_size = models.CharField(max_length=1000, null=True, blank=True)
+    distance_from_land = models.CharField(max_length=1000, null=True, blank=True)
+    any_other_navigational_hazards_in_the_area = models.CharField(max_length=1000, null=True, blank=True)
+    prevailing_winds = models.CharField(max_length=1000, null=True, blank=True)
+    predominant_current = models.CharField(max_length=1000, null=True, blank=True)
+    average_wave_height = models.CharField(max_length=1000, null=True, blank=True)
+    average_swell_height_and_period = models.CharField(max_length=1000, null=True, blank=True)
+    what_is_the_tidal_range_if_applicable = models.CharField(max_length=1000, null=True, blank=True)
+    location_subject_to_restrictive_met_conditions = models.CharField(max_length=1000, null=True, blank=True)
+    STS_Location_covered_by_forecasting_service = models.CharField(max_length=1000, null=True, blank=True)
+    location_adjacent_to_any_public_sensitive_areas = models.CharField(max_length=1000, null=True, blank=True)
+    environmental_bodies_to_be_advised_of_operations = models.CharField(max_length=1000, null=True, blank=True)
+    local_oil_pollution_prevention_requirements = models.CharField(max_length=1000, null=True, blank=True)
+    STS_area_covered_by_oil_spill_organisation = models.CharField(max_length=1000, null=True, blank=True)
+    contract_directly_with_an_oil_pollution_contractor = models.CharField(max_length=1000, null=True, blank=True)
+    oil_spill_responders = models.CharField(max_length=1000, null=True, blank=True)
+    local_emergency_Medical_Assistance = models.CharField(max_length=1000, null=True, blank=True)
+    police = models.CharField(max_length=1000, null=True, blank=True)
+    coast_guard = models.CharField(max_length=1000, null=True, blank=True)
+    fire_fighting = models.CharField(max_length=1000, null=True, blank=True)
+    date_created = models.DateTimeField(auto_now_add=True, null=True)
+
+
+    def __str__(self):
+        return self.name
+
+
+

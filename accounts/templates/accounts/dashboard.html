@@ -1,0 +1,199 @@
+{% extends 'accounts/main.html' %}
+{% block content %}
+{% include 'accounts/status.html' %}
+<br/>
+    <div class="row">
+	<div class="col-md-6">
+		<h5>USERS</h5>
+		<hr>
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Registration Date</th>
+					<th>Address</th>
+				</tr>
+				{% for i in user %}
+				<tr>
+					<td>
+						{{i.name}}
+					</td>
+					<td>
+						{{i.email}}
+					</td>
+					<td>
+						{{i.address}}
+					</td>
+					<td>
+						{{i.date_created}}
+					</td>
+				</tr>
+				{% endfor %}
+
+
+			</table>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		<h5>RECENT LOCATIONS</h5>
+		<hr>
+		<div class="card card-body">
+
+			<table class="table table-sm">
+				<tr>
+					<th>Location</th>
+					<th>Fendering position</th>
+					<th>STS_position</th>
+					<th>Company</th>
+					<th>Cargoes permitted</th>
+					<th>Operation type</th>
+					<th>Approval authority</th>
+					<th>Port fees vessels</th>
+					<th>Vessels size permitted</th>
+					<th>Date created</th>
+
+				</tr>
+
+				{% for i in location %}
+				<tr>
+					<td>
+						{{i.name}}
+					</td>
+					<td>
+						{{i.fendering_position}}
+					</td>
+					<td>
+						{{i.STS_position}}
+					</td>
+					<td>
+						{{i.company}}
+					</td>
+					<td>
+						{{i.cargoes_permitted}}
+					</td>
+					<td>
+						{{i.operation_type}}
+					</td>
+					<td>
+						{{i.approval_authority}}
+					</td>
+					<td>
+						{{i.port_fees_vessels}}
+					</td>
+					<td>
+						{{i.vessels_size_permitted}}
+					</td>
+					<td>
+						{{i.depth_of_water}}
+					</td>
+					<td>
+						{{i.prior_approval_to_each_STS_operation}}
+					</td>
+					<td>
+						{{i.vessel_sizes_permitted}}
+					</td>
+					<td>
+						{{i.night_time_berthing_permitted}}
+					</td>
+					<td>
+						{{i.is_local_piloting_assistance_required}}
+					</td>
+					<td>
+						{{i.are_tugs_required}}
+					</td>
+					<td>
+						{{i.primary_fenders}}
+					</td>
+					<td>
+						{{i.secondary_fenders}}
+					</td>
+					<td>
+						{{i.fender_moorings}}
+					</td>
+					<td>
+						{{i.rubber_hoses}}
+					</td>
+					<td>
+						{{i.composite_hoses}}
+					</td>
+					<td>
+						{{i.agent_company}}
+					</td>
+					<td>
+						{{i.agent_contact}}
+					</td>
+					<td>
+						{{i.fees_to_be_incurred_for_STS_operations}}
+					</td>
+					<td>
+						{{i.base_Location}}
+					</td>
+					<td>
+						{{i.storage_space}}
+					</td>
+					<td>
+						{{i.security_arrangements}}
+					</td>
+					<td>
+						{{i.closest_airport}}
+					</td>
+					<td>
+						{{i.local_taxi_firms}}
+					</td>
+					<td>
+						{{i.accommodation}}
+					</td>
+					<td>
+						{{i.base_facilities}}
+					</td>
+					<td>
+						{{i.notice_period}}
+					</td>
+					<td>
+						{{i.documentation_requirements}}
+					</td>
+					<td>
+						{{i.vessel_name}}
+					</td>
+					<td>
+						{{i.support_craft_owner}}
+					</td>
+					<td>
+						{{i.telephone}}
+					</td>
+					<td>
+						{{i.tug_provider_company}}
+					</td>
+					<td>
+						{{i.tug_provider_contact}}
+					</td>
+					<td>
+						{{i.tug_provider_vessel_Name}}
+					</td>
+					<td>
+						{{i.location_under_the_control_of_authorities}}
+					</td>
+					<td>
+						{{i.date_created}}
+					</td>
+
+				</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
